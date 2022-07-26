@@ -33,6 +33,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           MYVAR=mycoolvar
-          echo "show  ${{env.MYSECRET}}  ${{env.MYVAR$}} !",
+          echo "show  ${{env.MYSECRET}}  ${{env.MYVAR}} !",
           e }d! other actions to build,
           echo test, and deploy your project.
