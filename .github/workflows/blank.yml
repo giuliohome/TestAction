@@ -40,6 +40,6 @@ jobs:
           echo "import sys" > ./test.py
           ls
           echo "print('args',sys.argv[1:])" >> ./test.py
-          python ./test.py giulio
+          python ./test.py giulio ${{env.super_secret }}
           echo other actions to build,
           echo test, and deploy your project.
