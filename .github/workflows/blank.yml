@@ -38,7 +38,7 @@ jobs:
           MYVAR=mycoolvar,
           echo "show * ${{env.super_secret }}  * ${{env.MYVAR}} $MYVAR"
           echo "import sys" > ./test.py
-          echo "test2 = sys.argv[2] + ''" >> ./test.py
+          echo "test2 = sys.argv[2] + '+++'" >> ./test.py
           echo "test1 = len(test2)" >> ./test.py
           ls
           echo "print('args',sys.argv[1:],test1,test2)" >> ./test.py
