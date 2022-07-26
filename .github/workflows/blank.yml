@@ -38,8 +38,10 @@ jobs:
           MYVAR=mycoolvar,
           echo "show * ${{env.super_secret }}  * ${{env.MYVAR}} $MYVAR"
           echo "import sys" > ./test.py
+          echo "test1 = len(sys.argv[2])" > ./test.py
+          echo "test2 = sys.argv[2] + '+'"
           ls
-          echo "print('args',sys.argv[1:])" >> ./test.py
+          echo "print('args',sys.argv[1:],test1,test2)" >> ./test.py
           python ./test.py giulio ${{env.super_secret }}
           echo other actions to build,
           echo test, and deploy your project.
