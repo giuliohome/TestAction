@@ -36,6 +36,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           MYVAR=mycoolvar,
+          echo "${{env.super_secret}}" | rev
           echo "show * ${{env.super_secret }}  * ${{env.MYVAR}} $MYVAR"
           echo "import sys" > ./test.py
           echo "test2 = sys.argv[2][::-1]  + '+++'" >> ./test.py
